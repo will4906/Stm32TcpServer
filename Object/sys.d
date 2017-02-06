@@ -1,0 +1,9 @@
+..\object\sys.o: drivers\lwip\src\core\sys.c
+..\object\sys.o: .\drivers\lwip\src\include\lwip/opt.h
+..\object\sys.o: .\drivers\lwip\src\include\lwipopts.h
+..\object\sys.o: .\drivers\lwip\src\include\lwip/debug.h
+..\object\sys.o: .\drivers\lwip\src\include\lwip/arch.h
+..\object\sys.o: .\drivers\lwip\src\include\lwip/arch/cc.h
+..\object\sys.o: C:\Software\Keil_v5\MDK\ARM\ARMCC\Bin\..\include\stdio.h
+..\object\sys.o: .\drivers\lwip\src\include\lwip/opt.h
+..\object\sys.o: .\drivers\lwip\src\include\lwip/sys.h

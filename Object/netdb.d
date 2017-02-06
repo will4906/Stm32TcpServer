@@ -1,0 +1,9 @@
+..\object\netdb.o: drivers\lwip\src\api\netdb.c
+..\object\netdb.o: .\drivers\lwip\src\include\lwip/netdb.h
+..\object\netdb.o: .\drivers\lwip\src\include\lwip/opt.h
+..\object\netdb.o: .\drivers\lwip\src\include\lwipopts.h
+..\object\netdb.o: .\drivers\lwip\src\include\lwip/debug.h
+..\object\netdb.o: .\drivers\lwip\src\include\lwip/arch.h
+..\object\netdb.o: .\drivers\lwip\src\include\lwip/arch/cc.h
+..\object\netdb.o: C:\Software\Keil_v5\MDK\ARM\ARMCC\Bin\..\include\stdio.h
+..\object\netdb.o: .\drivers\lwip\src\include\lwip/opt.h

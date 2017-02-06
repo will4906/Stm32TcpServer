@@ -1,0 +1,11 @@
+..\object\inet.o: drivers\lwip\src\core\ipv4\inet.c
+..\object\inet.o: .\drivers\lwip\src\include\lwip/opt.h
+..\object\inet.o: .\drivers\lwip\src\include\lwipopts.h
+..\object\inet.o: .\drivers\lwip\src\include\lwip/debug.h
+..\object\inet.o: .\drivers\lwip\src\include\lwip/arch.h
+..\object\inet.o: .\drivers\lwip\src\include\lwip/arch/cc.h
+..\object\inet.o: C:\Software\Keil_v5\MDK\ARM\ARMCC\Bin\..\include\stdio.h
+..\object\inet.o: .\drivers\lwip\src\include\lwip/opt.h
+..\object\inet.o: .\drivers\lwip\src\include\ipv4\lwip/inet.h
+..\object\inet.o: .\drivers\lwip\src\include\lwip/def.h
+..\object\inet.o: .\drivers\lwip\src\include\ipv4\lwip/ip_addr.h
