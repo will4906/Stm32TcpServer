@@ -11,8 +11,8 @@
 
 ## TCP通信
 
-* `err_t SendTcpDataAsClient(u8 *buff, u16 length)`：发送数据
-* `void OnTcpClientReceiveData(void *recvData)`：接收数据的回调函数。处理接收到数据的时候需要做的事情，相当于中断。
+* `err_t SendTcpDataToClient(u8 *buff, u16 length)`：发送数据
+* `void OnTcpClientReceiveData(void *recvData, unsigned short len)`：接收数据的回调函数的子函数。处理接收到数据的时候需要做的事情，相当于中断。
 
 ## 其他
 

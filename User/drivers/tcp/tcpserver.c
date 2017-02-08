@@ -39,7 +39,6 @@ static err_t  OnTcpServerAccept(void *arg,struct tcp_pcb *pcb,err_t err)
 	tcp_setprio(pcb, TCP_PRIO_MIN); 		//设置回调函数优先级，当存在几个连接时特别重要,此函数必须调用*/
 	tcp_recv(pcb,OnTcpServerRecv); 		    //设置接收函数回调函数
 	
-	printf2("connect accept\r\n");
 	return ERR_OK;
 }
 
@@ -90,9 +89,9 @@ err_t SendTcpDataToClient(u8 *buff, u16 length)
 ***********************************************************/
 static void OnTcpReceiveData(void *recvData, unsigned short len)
 {
-	//tcp_write(tcp_client_pcb,recvData, len,1);       //将接收的数据原样返回
+	//Add code here
+	//在此处添加接收到数据的处理代码
 	SendTcpDataToClient(recvData, len);
-	//printf2("recv: %s\r\n",p->payload);
 	SendUartData(UART_PORT_COM2, recvData, len);
 }
 
@@ -117,7 +116,6 @@ void CheckForConnection(void)
 	if (!connectFlag)
 	{
 		CloseTcp(tcp_client_pcb);                                     //关闭连接
-		//InitTcpClient(getTcpLocalPort(),getServerIpAddr(),getServerPort());         //重新连接
 	}
 }
 

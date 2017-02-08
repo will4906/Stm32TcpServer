@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\Object\LwipTest.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\Object\LwipTest.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Feb 06 20:48:51 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Thu Feb 09 02:22:37 2017
 <BR><P>
 <H3>Maximum Stack Usage =       1036 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1508,8 +1508,8 @@ Global Symbols
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printf2
 </UL>
 
-<P><STRONG><a name="[11a]"></a>SendTcpDataAsClient</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, tcpserver.o(i.SendTcpDataAsClient))
-<BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = SendTcpDataAsClient &rArr; tcp_write &rArr; tcp_pbuf_prealloc &rArr; pbuf_alloc &rArr; pbuf_free &rArr; mem_free &rArr; plug_holes
+<P><STRONG><a name="[11a]"></a>SendTcpDataToClient</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, tcpserver.o(i.SendTcpDataToClient))
+<BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = SendTcpDataToClient &rArr; tcp_write &rArr; tcp_pbuf_prealloc &rArr; pbuf_alloc &rArr; pbuf_free &rArr; mem_free &rArr; plug_holes
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_write
 </UL>
@@ -2005,7 +2005,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printf2
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendTcpDataAsClient
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendTcpDataToClient
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadUartData
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitUartCon
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitTimerCon
@@ -2257,8 +2257,7 @@ Global Symbols
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__c89vsnprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnTcpServerAccept
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitLwipCon
+<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitLwipCon
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -2721,7 +2720,7 @@ Global Symbols
 <LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_pbuf_prealloc
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_create_segment
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendTcpDataAsClient
+<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendTcpDataToClient
 </UL>
 
 <P><STRONG><a name="[1a8]"></a>tcp_zero_window_probe</STRONG> (Thumb, 164 bytes, Stack size 40 bytes, tcp_out.o(i.tcp_zero_window_probe))
@@ -2905,21 +2904,19 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[119]"></a>OnTcpReceiveData</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, tcpserver.o(i.OnTcpReceiveData))
-<BR><BR>[Stack]<UL><LI>Max Depth = 300<LI>Call Chain = OnTcpReceiveData &rArr; SendTcpDataAsClient &rArr; tcp_write &rArr; tcp_pbuf_prealloc &rArr; pbuf_alloc &rArr; pbuf_free &rArr; mem_free &rArr; plug_holes
+<BR><BR>[Stack]<UL><LI>Max Depth = 300<LI>Call Chain = OnTcpReceiveData &rArr; SendTcpDataToClient &rArr; tcp_write &rArr; tcp_pbuf_prealloc &rArr; pbuf_alloc &rArr; pbuf_free &rArr; mem_free &rArr; plug_holes
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendUartData
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendTcpDataAsClient
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendTcpDataToClient
 </UL>
 <BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnTcpServerRecv
 </UL>
 
-<P><STRONG><a name="[52]"></a>OnTcpServerAccept</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, tcpserver.o(i.OnTcpServerAccept))
-<BR><BR>[Stack]<UL><LI>Max Depth = 376 + Unknown Stack Size
-<LI>Call Chain = OnTcpServerAccept &rArr; printf2 &rArr; __c89vsnprintf &rArr; _printf_char_common &rArr; __printf
+<P><STRONG><a name="[52]"></a>OnTcpServerAccept</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, tcpserver.o(i.OnTcpServerAccept))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OnTcpServerAccept
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_setprio
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_recv
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printf2
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> tcpserver.o(i.InitTcpServer)
 </UL>
